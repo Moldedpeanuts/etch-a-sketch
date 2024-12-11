@@ -1,10 +1,10 @@
 // Getting user input
 
-const button = document.querySelector("#prompt");
+const buttonGrid = document.querySelector("#prompt");
 
 let userInput;
 
-button.addEventListener('click', () => {
+buttonGrid.addEventListener('click', () => {
     userInput = parseInt(prompt("Please input a grid number"));
 });
 
@@ -27,3 +27,4 @@ for (let i = 0; i < 256; i++) {
     });
 }
 
+const 
