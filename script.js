@@ -1,17 +1,25 @@
+// Getting user input
 
 const button = document.querySelector("#prompt");
 
+let userInput;
+
 button.addEventListener('click', () => {
-    let userInput = parseInt(prompt("Please input a grid number"));
+    userInput = parseInt(prompt("Please input a grid number"));
 });
 
 
-const square = document.createElement("div");
-const container = document.querySelector(".container");
+// Creating a 16 x 16 grid of squares
 
-square.style.width = "100px";
-square.style.height = "100px";
-square.style.background = "white";
-square.style.border = "1px solid black";
+for (let i = 0; i < 256; i++) {
+    const square = document.createElement("div");
+    const container = document.querySelector(".container");
 
-container.appendChild(square);
+    square.style.width = "100px";
+    square.style.height = "100px";
+    square.style.background = "white";
+    square.style.border = "1px solid black";
+
+    container.appendChild(square);
+}
+
