@@ -21,5 +21,9 @@ for (let i = 0; i < 256; i++) {
     square.style.border = "1px solid black";
 
     container.appendChild(square);
+
+    square.addEventListener('mouseover', () => {
+        square.style.background = "red";
+    });
 }
 
