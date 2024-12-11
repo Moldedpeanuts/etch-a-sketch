@@ -1,3 +1,11 @@
+
+const button = document.querySelector("#prompt");
+
+button.addEventListener('click', () => {
+    let userInput = parseInt(prompt("Please input a grid number"));
+});
+
+
 const square = document.createElement("div");
 const container = document.querySelector(".container");
 
