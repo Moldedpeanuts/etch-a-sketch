@@ -22,9 +22,21 @@ for (let i = 0; i < 256; i++) {
 
     container.appendChild(square);
 
-    square.addEventListener('mouseover', () => {
-        square.style.background = "red";
+    const marker = document.querySelector("#marker");
+
+    marker.addEventListener('click', () => {
+        square.addEventListener('mouseover', () => {
+            square.style.background = "red";
+        });
     });
+
+    const eraser = document.querySelector("#eraser");
+
+    eraser.addEventListener('click', () => {
+        square.addEventListener('mouseover', () => {
+            square.style.background = "white";
+        });
+    });
+
 }
 
-const 
