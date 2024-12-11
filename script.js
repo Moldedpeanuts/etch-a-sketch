@@ -6,4 +6,4 @@ square.style.height = "100px";
 square.style.background = "white";
 square.style.border = "1px solid black";
 
-
+container.appendChild(square);
