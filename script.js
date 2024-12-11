@@ -15,8 +15,8 @@ for (let i = 0; i < 256; i++) {
     const square = document.createElement("div");
     const container = document.querySelector(".container");
 
-    square.style.width = "40px";
-    square.style.height = "40px";
+    square.style.width = "20px";
+    square.style.height = "20px";
     square.style.background = "white";
     square.style.border = "1px solid black";
 
