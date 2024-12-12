@@ -36,7 +36,7 @@ const buttonGrid = document.querySelector("#prompt");
 
 
 buttonGrid.addEventListener('click', () => {
-    let userInput = Number(prompt('Please enter an integer for appropriate grid'));
+    let userInput = Number(prompt('Enter a value to change squares per side'));
 
     switch(true) {
         case (userInput < 0):
