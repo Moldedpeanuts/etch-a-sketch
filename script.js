@@ -1,33 +1,39 @@
 // Creating a 16 x 16 grid of squares
 
-for (let i = 0; i < 256; i++) {
-    const square = document.createElement("div");
-    const container = document.querySelector(".container");
-
-    square.style.width = "20px";
-    square.style.height = "20px";
-    square.style.background = "white";
-    square.style.border = "1px solid black";
-
-    container.appendChild(square);
-
-    const marker = document.querySelector("#marker");
-
-    marker.addEventListener('click', () => {
-        square.addEventListener('mouseover', () => {
-            square.style.background = "red";
+const startingGrid = () => {
+    for(let i = 0; i < 256; i++) {
+        const square = document.createElement("div");
+        const container = document.querySelector(".container");
+    
+        square.style.width = "20px";
+        square.style.height = "20px";
+        square.style.background = "white";
+        square.style.border = "1px solid black";
+    
+        container.appendChild(square);
+    
+    
+        const marker = document.querySelector("#marker");
+    
+        marker.addEventListener('click', () => {
+            square.addEventListener('mouseover', () => {
+                square.style.background = "red";
+            });
         });
-    });
-
-    const eraser = document.querySelector("#eraser");
-
-    eraser.addEventListener('click', () => {
-        square.addEventListener('mouseover', () => {
-            square.style.background = "white";
+    
+        const eraser = document.querySelector("#eraser");
+    
+        eraser.addEventListener('click', () => {
+            square.addEventListener('mouseover', () => {
+                square.style.background = "white";
+            });
         });
-    });
+    }
+};
 
-}
+document.addEventListener("DOMContentLoaded", () => {
+    startingGrid();
+});
 
 
 // Getting user input
