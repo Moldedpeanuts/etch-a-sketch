@@ -43,7 +43,7 @@ buttonGrid.addEventListener('click', () => {
         case (userInput > 100):
         case (isNaN(userInput)):
         case (typeof userInput === "number" && !Number.isInteger(userInput)):
-            alert("Please input a valid integer number from 0 to 100 to change the grid");
+            alert("Please input a valid integer number from 0 to 100");
             break;
     }
 });
