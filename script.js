@@ -51,5 +51,7 @@ buttonGrid.addEventListener('click', () => {
         case (typeof userInput === "number" && !Number.isInteger(userInput)):
             alert("Please input a valid integer number from 0 to 100");
             break;
+        case (userInput > 0 && userInput < 100 && Number.isInteger(userInput)):
+            
     }
 });
