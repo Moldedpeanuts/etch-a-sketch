@@ -1,7 +1,7 @@
 // Creating a 16 x 16 grid of squares
 function startingGrid(squaresPerSide) {
     const container = document.querySelector(".container");
-    container.innerHTML = ''; // Clear the previous grid
+    container.textContent = ''; // Clear the previous grid
 
     for(let i = 0; i < squaresPerSide* squaresPerSide; i++) {
         const square = document.createElement("div");
