@@ -1,6 +1,5 @@
 // Creating a 16 x 16 grid of squares
-
-const startingGrid = () => {
+function startingGrid() {
     for(let i = 0; i < 256; i++) {
         const square = document.createElement("div");
         const container = document.querySelector(".container");
@@ -29,17 +28,14 @@ const startingGrid = () => {
             });
         });
     }
-};
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-    startingGrid();
-});
+document.addEventListener('DOMContentLoaded', startingGrid);
 
 
 // Getting user input
 
 const buttonGrid = document.querySelector("#prompt");
-
 
 buttonGrid.addEventListener('click', () => {
     let userInput = Number(prompt('Please enter a number to change squares per side'));
@@ -52,6 +48,7 @@ buttonGrid.addEventListener('click', () => {
             alert("Please input a valid integer number from 0 to 100");
             break;
         case (userInput > 0 && userInput < 100 && Number.isInteger(userInput)):
-            
+        
     }
 });
+
