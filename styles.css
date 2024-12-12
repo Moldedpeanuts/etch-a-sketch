@@ -1,4 +1,4 @@
-body {
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 360px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
 }
 
