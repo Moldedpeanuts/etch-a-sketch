@@ -1,11 +1,13 @@
 // Creating a 16 x 16 grid of squares
-function startingGrid() {
-    for(let i = 0; i < 256; i++) {
+function startingGrid(squaresPerSide) {
+    const container = document.querySelector(".container");
+    container.innerHTML = ''; // Clear the previous grid
+
+    for(let i = 0; i < squaresPerSide* squaresPerSide; i++) {
         const square = document.createElement("div");
-        const container = document.querySelector(".container");
     
-        square.style.width = "20px";
-        square.style.height = "20px";
+        square.style.width = `${400 / squaresPerSide}px`;
+        square.style.height = `${400 / squaresPerSide}px`;
         square.style.background = "white";
         square.style.border = "1px solid black";
     
@@ -30,7 +32,9 @@ function startingGrid() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', startingGrid);
+document.addEventListener("DOMContentLoaded", () => {
+    startingGrid(16);
+});
 
 
 // Getting user input
@@ -48,7 +52,7 @@ buttonGrid.addEventListener('click', () => {
             alert("Please input a valid integer number from 0 to 100");
             break;
         case (userInput > 0 && userInput < 100 && Number.isInteger(userInput)):
-        
+            startingGrid(userInput);
     }
 });
 
